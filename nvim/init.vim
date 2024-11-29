@@ -47,6 +47,8 @@ Plug 'echasnovski/mini.diff', { 'branch': 'stable' }
 
 Plug 'sheerun/vim-polyglot'
 Plug 'joshdick/onedark.vim'
+
+Plug 'wakatime/vim-wakatime'
 call plug#end()
 
 " let g:polyglot#init#is_disabled = 1
