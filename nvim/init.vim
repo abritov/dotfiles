@@ -8,7 +8,10 @@ set expandtab     "use space to instead the tab character
 
 filetype plugin indent on
 filetype indent on
-set autoindent
+" set autoindent
+set smartindent
+
+set clipboard+=unnamedplus
 
 
 set termguicolors
