@@ -37,7 +37,8 @@ call plug#begin()
 Plug 'tpope/vim-sensible'
 
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.8' }
+" keep this commit until telescope 0.2.0 will merge horizontal preview scroll
+Plug 'nvim-telescope/telescope.nvim', { 'commit': '61a4a61' }
 
 Plug 'kdheepak/lazygit.nvim'
 
@@ -72,9 +73,13 @@ nnoremap <leader>/ <cmd>Telescope live_grep<cr>
 nnoremap <leader>,  <cmd>Telescope buffers<cr>
 nnoremap <leader>m <cmd>Telescope marks<cr>
 nnoremap <silent> <Space><Space> <cmd>Telescope git_files<CR>
+" lua <<EOF 
+" vim.keymap.set('n', '<C-k>', require('telescope.actions').preview_scrolling_right, { desc = 'Scroll Right in Preview' })
+" vim.keymap.set('n', '<C-f>', require('telescope.actions').preview_scrolling_left, { desc = 'Scroll Left in Preview' })
+" EOF
+
 
 nnoremap <silent> <Space>bd :bd<CR>
-
 
 nnoremap <leader>gg <cmd>LazyGit<cr>
 
