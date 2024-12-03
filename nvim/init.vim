@@ -50,6 +50,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'joshdick/onedark.vim'
 
 Plug 'wakatime/vim-wakatime'
+
+Plug 'ThePrimeagen/harpoon', { 'branch': 'harpoon2' }
 call plug#end()
 
 " let g:polyglot#init#is_disabled = 1
@@ -84,3 +86,13 @@ nnoremap <silent> <Space>bd :bd<CR>
 nnoremap <leader>gg <cmd>LazyGit<cr>
 
 lua require('mini.diff').setup()
+lua <<EOF 
+  local harpoon = require("harpoon")
+  harpoon:setup()
+  vim.keymap.set("n", "<leader>a", function() harpoon:list():add() end)
+  vim.keymap.set("n", "<leader>d", function() harpoon:list():remove() end)
+  vim.keymap.set("n", "<leader>n", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)  
+  vim.keymap.set("n", "<C-[>", function() harpoon:list():prev() end)
+  vim.keymap.set("n", "<C-]>", function() harpoon:list():next() end)
+EOF
+
