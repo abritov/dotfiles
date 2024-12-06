@@ -65,8 +65,9 @@ let mapleader = " "
 
 map <leader>/ :Rg!<CR>
 map <leader>e :NERDTreeToggle<CR>
-map <leader>, :Buffers!<CR>
 map <leader>bb :b#<CR>
+map <M-[> :cprev<CR>
+map <M-]> :cnext<CR>
 
 
 " Find files using Telescope command-line sugar.
