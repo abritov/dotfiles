@@ -33,6 +33,9 @@ Plug 'preservim/nerdtree'
 Plug 'echasnovski/mini.nvim', { 'branch': 'stable' }
 Plug 'echasnovski/mini.diff', { 'branch': 'stable' }
 
+Plug 'folke/which-key.nvim'
+Plug 'lewis6991/gitsigns.nvim'
+
 Plug 'sheerun/vim-polyglot'
 Plug 'joshdick/onedark.vim'
 
