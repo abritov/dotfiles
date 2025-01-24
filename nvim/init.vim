@@ -39,6 +39,8 @@ Plug 'joshdick/onedark.vim'
 Plug 'wakatime/vim-wakatime'
 
 Plug 'ThePrimeagen/harpoon', { 'branch': 'harpoon2' }
+
+Plug 'vim-airline/vim-airline'
 call plug#end()
 
 " let g:polyglot#init#is_disabled = 1
@@ -84,3 +86,4 @@ lua <<EOF
   vim.keymap.set("n", "<C-]>", function() harpoon:list():next() end)
 EOF
 
+let g:airline_section_z = ''
