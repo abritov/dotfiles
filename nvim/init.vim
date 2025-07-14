@@ -28,6 +28,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'commit': '61a4a61' }
 
 Plug 'kdheepak/lazygit.nvim'
+Plug 'tpope/vim-fugitive'
 
 Plug 'preservim/nerdtree'
 Plug 'echasnovski/mini.nvim', { 'branch': 'stable' }
