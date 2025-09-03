@@ -1,6 +1,6 @@
 CHANNELS   = $(HOME)/dotfiles/guix/etc/guix/channels.scm
 SYS_CONFIG = $(HOME)/dotfiles/guix/etc/config.scm
-HOME_CONFIG= $(HOME)/dotfiles/home/alice.scm
+HOME_CONFIG= $(HOME)/dotfiles/guix/home/home-configuration.scm
 
 .PHONY: pull system home
 pull:
@@ -11,3 +11,4 @@ system:
 
 home:
 	guix home reconfigure $(HOME_CONFIG)
+	source ~/.guix-home/setup-environment
