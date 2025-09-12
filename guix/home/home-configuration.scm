@@ -19,8 +19,13 @@
 		  (specification->package "emacs-use-package")
 		  ))
   (services
-    (list (service home-bash-service-type
-		   (home-bash-configuration))
+    (list 
+
+	  (service home-bash-service-type
+           (home-bash-configuration
+             (bashrc
+              (list (plain-file "bashrc-extra"
+                     "eval \"$($HOME/.local/bin/mise activate bash)\"")))))
 
 	  (simple-service 'git-config home-files-service-type
 			  (list `(".gitconfig" ,(git-config-file))))
