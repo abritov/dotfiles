@@ -30,4 +30,11 @@
 	  (simple-service 'git-config home-files-service-type
 			  (list `(".gitconfig" ,(git-config-file))))
 
+	  (simple-service 'tmux-config home-files-service-type
+                      (list `(".tmux.conf"
+                              ,(plain-file "tmux-config"
+                                 (string-append
+                                  "# This file is symlinked to dotfiles\n"
+                                  "source-file " "/home/fitumi/dotfiles/tmux/.tmux.conf" "\n")))))
+
 			  )))
