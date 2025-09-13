@@ -1,6 +1,7 @@
 (use-modules
 	  (gnu packages)
 	  (gnu services)
+	  (gnu packages mc)
 	  (gnu packages tmux)
 	  (gnu packages gnuzilla)
 	  (gnu packages web-browsers)
@@ -14,8 +15,12 @@
 (include "gitconfig.scm")
 
 (home-environment
-  (packages (list stow tmux tig
+  (packages (list stow 
+		  tmux 
+		  tig
+		  mc
 		  (specification->package "emacs")
+		  (specification->package "emacs-evil")
 		  (specification->package "emacs-use-package")
 		  ))
   (services
