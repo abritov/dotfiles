@@ -40,6 +40,6 @@
                               ,(plain-file "tmux-config"
                                  (string-append
                                   "# This file is symlinked to dotfiles\n"
-                                  "source-file " "/home/fitumi/dotfiles/tmux/.tmux.conf" "\n")))))
+                                  "source-file " "$HOME/dotfiles/tmux/.tmux.conf" "\n")))))
 
 			  )))
